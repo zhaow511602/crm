@@ -1,0 +1,16 @@
+<table border="1">
+    <thead>
+    {% for item in hhhh %}
+        <td>{{ item }}</td>
+    {% endfor %}
+    </thead>
+    <tbody>
+        {% for item in xxxx %}
+            <tr>
+                {% for val in item %}
+                    <td>{{ val }}</td>
+                {% endfor %}
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
