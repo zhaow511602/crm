@@ -1,13 +1,18 @@
 from django.conf.urls import url,include
-from django.shortcuts import render,HttpResponse
+from django.shortcuts import render,HttpResponse,reverse,redirect
 
 from django.contrib import admin
 
 class modelYinGun(object):
     list_display = "__all__"
+    add_edit_model =None
     def __init__(self,model_class,site):
         self.model_class = model_class
         self.site = site
+        self.app_label = model_class._meta.app_label
+        self.model_name = model_class._meta.model_name
+
+
 
     @property
     def urls(self):
@@ -21,27 +26,103 @@ class modelYinGun(object):
         ]
         return urlpatterns
 
+    def get_add_edit_model(self):
+        if self.add_edit_model:
+            return self.add_edit_model
+        else:
+            from django.forms import ModelForm
+            # class MyModelForm(ModelForm):
+            #     class Meta:
+            #         model = self.model_class
+            #         fields = '__all__'
+            _m = type('Meta',(object,),{'model':self.model_class,'fields':'__all__'})
+            MyModelForm = type('MyModelForm',(ModelForm,),{'Meta':_m})
+            return MyModelForm
+
     def changelist_view(self,request):
         result_list = self.model_class.objects.all()
+        #反向生成url
+        #保留访问url数据
+        from django.http.request import QueryDict
+        param_dic = QueryDict(mutable=True)
+        if request.GET:
+            param_dic['_changelistfilter']=request.GET.urlencode()
+        name = '{0}_{1}_add'.format(self.app_label, self.model_name)
+        base_add_url = reverse('{0}:{1}'.format(self.site.namespace, name))
+        add_url = '{0}?{1}'.format(base_add_url, param_dic.urlencode())
+        self.request = request
         content = {
             'list_display':self.list_display,
             'result_list':result_list,
             'yg_admin':self,
+            'add_url':add_url,
         }
         return render(request,'yg/change_list.html',content)
 
+
     def add_view(self,request):
-        info = self.model_class._meta.app_label,self.model_class._meta.model_name
-        res = '%s_%s_add' % info
-        return HttpResponse(res)
+
+        if request.method=='GET':
+            MyModelForm = self.get_add_edit_model()()
+            content={
+                'form': MyModelForm,
+            }
+            return render(request, 'yg/add.html',content)
+        else:
+            param_url = request.GET.get('_changelistfilter')
+            MyModelForm = self.get_add_edit_model()(data=request.POST,files=request.FILES)
+            if MyModelForm.is_valid():
+                obj = MyModelForm.save()
+                popupid = request.GET.get('popup')
+                if popupid:
+                    content={
+                        'popupid':popupid,
+                        'pk':obj.pk,
+                        'text':str(obj)
+                    }
+                    return render(request,'yg/popup_response.html',content)
+                else:
+                    base_add_url = reverse('{0}:{1}_{2}_changelist'.format(self.site.namespace, self.app_label, self.model_name))
+                    add_url = '{0}?{1}'.format(base_add_url, param_url)
+                    return redirect(add_url)
+            else:
+                return HttpResponse('错误了')
+
+
     def delete_view(self,request, pk):
-        info = self.model_class._meta.app_label, self.model_class._meta.model_name
-        res = '%s_%s_del' % info
-        return HttpResponse(res)
+        obj = self.model_class.objects.filter(pk=pk).delete()
+        if obj:
+            param_url = request.GET.get('_changelistfilter')
+            base_add_url = reverse(
+                '{0}:{1}_{2}_changelist'.format(self.site.namespace, self.app_label, self.model_name))
+            add_url = '{0}?{1}'.format(base_add_url, param_url)
+            return redirect(add_url)
+        else:
+            return HttpResponse('删除失败')
+
     def change_view(self,request, pk):
-        info = self.model_class._meta.app_label, self.model_class._meta.model_name
-        res = '%s_%s_change' % info
-        return HttpResponse(res)
+        obj = self.model_class.objects.filter(pk=pk).first()
+        if request.method =='GET':
+            MyModelForm = self.get_add_edit_model()(instance=obj)
+            content = {
+                'form': MyModelForm,
+                'yg_admin':self
+            }
+            return render(request, 'yg/edit.html', content)
+        else:
+            MyModelForm = self.get_add_edit_model()(data=request.POST,files=request.FILES,instance=obj)
+            if MyModelForm.is_valid():
+                MyModelForm.save()
+                param_url = request.GET.get('_changelistfilter')
+                base_add_url = reverse(
+                    '{0}:{1}_{2}_changelist'.format(self.site.namespace, self.app_label, self.model_name))
+                add_url = '{0}?{1}'.format(base_add_url, param_url)
+                return redirect(add_url)
+            else:
+                content = {
+                    'form': MyModelForm,
+                }
+                return render(request, 'yg/edit.html', content)
 
 
 
