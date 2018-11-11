@@ -1,10 +1,13 @@
 from django.conf.urls import url,include
 from django.shortcuts import render,HttpResponse,reverse,redirect
+import copy
 
 from django.contrib import admin
 
 class modelYinGun(object):
     list_display = "__all__"
+    action_list = []
+
     add_edit_model =None
     def __init__(self,model_class,site):
         self.model_class = model_class
@@ -51,11 +54,68 @@ class modelYinGun(object):
         base_add_url = reverse('{0}:{1}'.format(self.site.namespace, name))
         add_url = '{0}?{1}'.format(base_add_url, param_dic.urlencode())
         self.request = request
+
+        # ############# 分页 开始 #############
+        condition = {}
+
+        from yingun.utils.my_page import PageInfo
+        all_count = self.model_class.objects.filter(**condition).count()
+        base_page_url = reverse("{2}:{0}_{1}_changelist".format(self.app_label, self.model_name, self.site.namespace))
+        page_param_dict = copy.deepcopy(request.GET)
+        page_param_dict._mutable = True
+
+        page_obj = PageInfo(request.GET.get('page'), all_count, base_page_url, page_param_dict,2)
+        result_list = self.model_class.objects.filter(**condition)[page_obj.start:page_obj.end]
+        # ############# 分页 结束 #############
+
+        # ############# action 开始 #############
+        if self.action_list:
+            action_name_list = []
+            for item in self.action_list:
+                action_name = {'name':item.__name__,'text':item.text}
+                action_name_list.append(action_name)
+        else:
+            action_name_list = []
+
+        if request.method == "POST":
+
+            action_func = request.POST.get('action')
+            res = getattr(self,action_func)(request,)
+            action_page_url = reverse(
+                "{2}:{0}_{1}_changelist".format(self.app_label, self.model_name, self.site.namespace))
+            if res:
+                action_page_url = reverse(
+                    "{2}:{0}_{1}_changelist".format(
+                        self.app_label, self.model_name,  self.site.namespace))+'?{0}'.format(request.GET.urlencode())
+            return redirect(action_page_url)
+        # ############# action 结束 #############
+
+        # ############# 组合搜索 开始 #############
+        from django.db.models import ForeignKey,ManyToManyField
+        from yingun.utils.filter_code import FilterList
+        # if self.filter_list:
+        filter_list = []
+        for optin in self.filter_list:
+            if optin.is_func:
+                pass
+            else:
+                field = self.model_class._meta.get_field(optin.field_or_func)
+                if isinstance(field,ForeignKey):
+                    filterlist = FilterList(optin,field.rel.model.objects.all(),request)
+                elif isinstance(field,ManyToManyField):
+                    filterlist = FilterList(optin, field.rel.model.objects.all(),request)
+                else:
+                    filterlist = FilterList(optin, field.model.objects.all(), request)
+            filter_list.append(filterlist)
+        # ############# 组合搜索 结束 #############
         content = {
+            'filter_list':filter_list,
             'list_display':self.list_display,
             'result_list':result_list,
             'yg_admin':self,
             'add_url':add_url,
+            'page_obj':page_obj,
+            'action_name_list':action_name_list,
         }
         return render(request,'yg/change_list.html',content)
 

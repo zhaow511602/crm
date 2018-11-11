@@ -36,7 +36,7 @@ def checkbox(self, obj=None, is_header=False):
     if is_header:
         return '筛选'
     else:
-        return mark_safe('<input type="checkbox" value={0}/>'.format(obj.pk))
+        return mark_safe('<input  type="checkbox" value={0} name="pk_ids"/>'.format(obj.pk))
 
 
 list_display = [checkbox, 'id', 'user', 'email', func]
@@ -54,14 +54,40 @@ class UserYinGun(v.modelYinGun):
     # def checkbox(self,obj):
     #     return mark_safe('<input type="checkbox" value={0}/>'.format(obj.pk))
     list_display = [checkbox,'id','user','email',func,dele]
+    def initail(self,request):
+        pk_ids_list = request.POST.getlist('pk_ids')
+        print(pk_ids_list)
+        self.model_class.objects.filter(pk__in=pk_ids_list).update(user="占山")
+        return True
+
+    initail.text = '初始化'
+    def mutil_delete(self,request):
+        pass
+
+    mutil_delete.text = '批量删除'
+    action_list = [initail,mutil_delete]
+
+    ##################  组合筛选  #################
+    from yingun.utils.filter_code import FilterOption
+    filter_list = [
+        FilterOption('user',False,text_func_name='text_user',val_func_name='val_user'),
+        FilterOption('email',False,text_func_name='text_email',val_func_name='val_email'),
+        FilterOption('ug',True),
+        FilterOption('m2m',True),
+    ]
 
 v.site.register(models.UserInof,UserYinGun)
 
+
 class RoleYinGun(v.modelYinGun):
     list_display = [checkbox,'id','name',func]
-
 v.site.register(models.Role,RoleYinGun)
+
 
 class UserGroupYinGun(v.modelYinGun):
     list_display = [checkbox,'id','title',func]
-v.site.register(models.UserGroup,UserGroupYinGun)
+
+v.site.register(models.UserGroup,)
+
+
+

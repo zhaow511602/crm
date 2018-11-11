@@ -5,11 +5,64 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="/static/bootstrap-3.3.7-dist/css/bootstrap.css">
+    <style>
+        .comb-search a{
+            display: inline-block;
+            border: 1px solid #dddddd;
+            padding: 5px 8px;
+            margin: 5px;
+        }
+        .comb-search a.active{
+            background-color: #2aabd2;
+            color: white;
+        }
+        .comb-search .all-area{
+            float: left;
+        }
+        .comb-search .others-area{
+            padding-left: 70px;
+        }
+    </style>
 </head>
 <body>
    <h3>详细列表</h3>
-   <a href={{ add_url }}> 添加</a>
-{% func result_list list_display yg_admin %}
+   <div class="container">
+       <form method="POST">
+           {% csrf_token %}
+            {#  ########   组合筛选 开始      #########}
+           {% if filter_list %}
+               <div class="row comb-search">
+                   <h3>组合搜索</h3>
+                   {% for fl in filter_list %}
+                       <div class="row">
+                           {% for row in fl %}
+                               {{ row }}
+                           {% endfor %}
+                       </div>
+                   {% endfor %}
+               </div>
+           {% endif %}
+            {#  ########   组合筛选 结束     #########}
 
+           <a class="btn btn-success" style="float: right" href={{ add_url }}> 添加</a>
+           {#  ########   action 开始      #########}
+           {% if action_name_list %}
+               <select name="action" id="">
+                   {% for item in action_name_list %}
+                       <option value="{{ item.name }}">{{ item.text }}</option>
+                   {% endfor %}
+               </select>
+               <input type="submit" value="执行">
+           {% endif %}
+           {#  ########   action 结束      #########}
+
+           {% func result_list list_display yg_admin %}
+       </form>
+       {#  ########   分页      #########}
+       <ul class="pagination">
+           {{ page_obj.pager|safe }}
+       </ul>
+    {#     ########   分页 结束     #########     #}
+   </div>
 </body>
 </html>

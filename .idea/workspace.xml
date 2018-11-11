@@ -2,17 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="86e282ee-540a-4b0a-ac3c-8e8c8719a0cd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/708fafc6-dce0-405d-9646-165dcd64a77c.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/708fafc6-dce0-405d-9646-165dcd64a77c.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app01/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app01/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app01/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app01/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app01/yg.py" beforeDir="false" afterPath="$PROJECT_DIR$/app01/yg.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mycrm/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/mycrm/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mycrm/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/mycrm/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yingun/service/v.py" beforeDir="false" afterPath="$PROJECT_DIR$/yingun/service/v.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yingun/templates/yg/change_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/yingun/templates/yg/change_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yingun/templates/yg/md.html" beforeDir="false" afterPath="$PROJECT_DIR$/yingun/templates/yg/md.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yingun/templatetags/yg.py" beforeDir="false" afterPath="$PROJECT_DIR$/yingun/templatetags/yg.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -55,47 +49,47 @@
     <session id="103104051">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="7" />
+          <entry key="project.closed" value="8" />
           <entry key="project.open.time.10" value="1" />
-          <entry key="project.open.time.11" value="3" />
+          <entry key="project.open.time.11" value="4" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.8" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="7" />
+          <entry key="project.opened" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="app01_role" value="4" />
           <entry key="app01_usergroup" value="9" />
-          <entry key="app01_userinof" value="6" />
+          <entry key="app01_userinof" value="9" />
           <entry key="app02_xx" value="1" />
-          <entry key="html" value="26" />
+          <entry key="html" value="30" />
           <entry key="js" value="1" />
-          <entry key="py" value="69" />
+          <entry key="py" value="83" />
           <entry key="yg_formpy" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Database Element" value="20" />
-          <entry key="HTML" value="26" />
+          <entry key="Database Element" value="23" />
+          <entry key="HTML" value="30" />
           <entry key="JavaScript" value="1" />
           <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Python" value="69" />
+          <entry key="Python" value="83" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="cell" value="82" />
-          <entry key="html" value="1129" />
-          <entry key="py" value="4487" />
+          <entry key="html" value="1434" />
+          <entry key="py" value="6388" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="1129" />
-          <entry key="Python" value="4487" />
+          <entry key="HTML" value="1434" />
+          <entry key="Python" value="6388" />
           <entry key="Scratch" value="82" />
         </counts>
       </usages-collector>
@@ -105,34 +99,65 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/yingun/templates/yg/mdedit.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/yingun/service/v.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="7" column="24" lean-forward="true" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+            <state relative-caret-position="244">
+              <caret line="112" column="45" lean-forward="true" selection-start-line="112" selection-start-column="45" selection-end-line="112" selection-end-column="45" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
-                <marker date="1541844624100" expanded="true" signature="958:1446" ph="..." />
-                <marker date="1541844624100" expanded="true" signature="2239:2245" ph="..." />
+                <element signature="e#4954#5773#0" />
+                <element signature="e#5217#5544#0" />
+                <marker date="1541950585036" expanded="true" signature="992:1480" ph="..." />
+                <marker date="1541950585036" expanded="true" signature="4869:4875" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/yingun/templates/yg/popup_response.html">
+        <entry file="file://$PROJECT_DIR$/app01/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="130">
+              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/yingun/templates/yg/change_list.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="16" column="25" lean-forward="true" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app01/yg.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="225">
-              <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="10" selection-end-column="9" />
+              <caret line="76" column="5" lean-forward="true" selection-start-line="76" selection-start-column="5" selection-end-line="76" selection-end-column="5" />
+              <folding>
+                <element signature="e#180#857#0" />
+                <element signature="e#905#1582#0" />
+                <element signature="e#1635#1765#0" />
+                <marker date="1541955837871" expanded="true" signature="2708:2758" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/yingun/utils/filter_code.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="705">
+              <caret line="63" column="30" selection-start-line="63" selection-start-column="30" selection-end-line="63" selection-end-column="30" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+                <marker date="1541955903856" expanded="true" signature="891:3033" ph="..." />
+                <marker date="1541955903856" expanded="true" signature="1172:1181" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -160,13 +185,9 @@
         <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$PROJECT_DIR$/yingun/templates/yg/add.html" />
         <option value="$PROJECT_DIR$/mycrm/settings.py" />
-        <option value="$PROJECT_DIR$/yingun/templates/yg/change_list.html" />
         <option value="$PROJECT_DIR$/yingun/templates/yg/md.html" />
-        <option value="$PROJECT_DIR$/yingun/templatetags/yg.py" />
         <option value="$PROJECT_DIR$/yingun/templates/yg/edit.html" />
         <option value="$PROJECT_DIR$/yingun/templatetags/yg_form.py" />
-        <option value="$PROJECT_DIR$/app01/models.py" />
-        <option value="$PROJECT_DIR$/app01/yg.py" />
         <option value="$PROJECT_DIR$/templates/test.html" />
         <option value="$PROJECT_DIR$/templates/add_test.html" />
         <option value="$PROJECT_DIR$/templates/pop.html" />
@@ -174,7 +195,12 @@
         <option value="$PROJECT_DIR$/mycrm/urls.py" />
         <option value="$PROJECT_DIR$/yingun/templates/yg/mdedit.html" />
         <option value="$PROJECT_DIR$/yingun/templates/yg/popup_response.html" />
+        <option value="$PROJECT_DIR$/yingun/templatetags/yg.py" />
+        <option value="$PROJECT_DIR$/app01/models.py" />
         <option value="$PROJECT_DIR$/yingun/service/v.py" />
+        <option value="$PROJECT_DIR$/yingun/templates/yg/change_list.html" />
+        <option value="$PROJECT_DIR$/app01/yg.py" />
+        <option value="$PROJECT_DIR$/yingun/utils/filter_code.py" />
       </list>
     </option>
   </component>
@@ -196,7 +222,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -241,12 +266,19 @@
             </path>
             <path>
               <item name="mycrm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mycrm" type="462c0819:PsiDirectoryNode" />
+              <item name="yingun" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mycrm" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -257,15 +289,15 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\练习脚本\mycrm\yingun\templates\yg" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\练习脚本\mycrm\yingun\utils" />
       <recent name="E:\练习脚本\mycrm\templates" />
       <recent name="E:\练习脚本\mycrm\yingun\templatetags" />
       <recent name="E:\练习脚本\mycrm\yingun\templates\yg" />
       <recent name="E:\练习脚本\mycrm\static" />
-      <recent name="E:\练习脚本\mycrm\yingun\templates" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\练习脚本\mycrm\yingun\templates\yg" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -322,12 +354,12 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="696" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23344104" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15185784" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.41385436" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3250444" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -472,13 +504,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://708fafc6-dce0-405d-9646-165dcd64a77c/schema/main/table/app01_userinof">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/bootstrap-3.3.7-dist/js/npm.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -496,13 +521,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/yingun/templates/yg/change_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="10" column="32" lean-forward="true" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/django/forms/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="151">
@@ -511,13 +529,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/yingun/templatetags/yg_formpy" />
-    <entry file="file://$PROJECT_DIR$/yingun/templatetags/yg.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/django/forms/widgets.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-150" />
@@ -530,13 +541,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/yingun/templates/yg/md.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="2" column="23" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/yingun/templates/yg/add.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
@@ -544,24 +548,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app01/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/yingun/templates/yg/edit.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5">
           <caret line="3" column="6" lean-forward="true" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app01/yg.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="691">
-          <caret line="62" column="39" lean-forward="true" selection-start-line="62" selection-start-column="39" selection-end-line="62" selection-end-column="39" />
         </state>
       </provider>
     </entry>
@@ -589,10 +579,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/yingun/templates/yg/mdedit.html">
+    <entry file="file://$PROJECT_DIR$/yingun/templatetags/yg_form.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
+        <state relative-caret-position="375">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
         </state>
       </provider>
     </entry>
@@ -603,24 +593,97 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/yingun/templatetags/yg_form.py">
+    <entry file="file://$PROJECT_DIR$/yingun/templates/yg/mdedit.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        <state relative-caret-position="450">
+          <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://708fafc6-dce0-405d-9646-165dcd64a77c/schema/main/table/app01_userinof">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yingun/utils/my_page.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-214">
+          <caret line="28" column="13" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yingun/templates/yg/md.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="5" column="12" lean-forward="true" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yingun/templatetags/yg.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="16" column="9" lean-forward="true" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/django/db/models/fields/related.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-375">
+          <caret line="836" column="32" lean-forward="true" selection-start-line="836" selection-start-column="32" selection-end-line="836" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yingun/templates/yg/change_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="16" column="25" lean-forward="true" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app01/yg.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="76" column="5" lean-forward="true" selection-start-line="76" selection-start-column="5" selection-end-line="76" selection-end-column="5" />
           <folding>
-            <element signature="e#0#35#0" expanded="true" />
+            <element signature="e#180#857#0" />
+            <element signature="e#905#1582#0" />
+            <element signature="e#1635#1765#0" />
+            <marker date="1541955837871" expanded="true" signature="2708:2758" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yingun/utils/filter_code.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="705">
+          <caret line="63" column="30" selection-start-line="63" selection-start-column="30" selection-end-line="63" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+            <marker date="1541955903856" expanded="true" signature="891:3033" ph="..." />
+            <marker date="1541955903856" expanded="true" signature="1172:1181" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app01/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/yingun/service/v.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="7" column="24" lean-forward="true" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+        <state relative-caret-position="244">
+          <caret line="112" column="45" lean-forward="true" selection-start-line="112" selection-start-column="45" selection-end-line="112" selection-end-column="45" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
-            <marker date="1541844624100" expanded="true" signature="958:1446" ph="..." />
-            <marker date="1541844624100" expanded="true" signature="2239:2245" ph="..." />
+            <element signature="e#4954#5773#0" />
+            <element signature="e#5217#5544#0" />
+            <marker date="1541950585036" expanded="true" signature="992:1480" ph="..." />
+            <marker date="1541950585036" expanded="true" signature="4869:4875" ph="..." />
           </folding>
         </state>
       </provider>
